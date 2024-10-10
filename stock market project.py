@@ -56,6 +56,12 @@ def trade_soda_stocks(stocks):
             last_price = stock_data['c']
             logging.info(f"Last price for {stock}: ${last_price}")
 
+            # Check if sufficient funds are available before placing the order
+            account = alpaca_client.get_account()
+            if float(account.cash) < last_price:
+                logging.error(f"Insufficient funds to buy {stock}.")
+                continue
+
             market_order_data = MarketOrderRequest(
                 symbol=stock,
                 qty=1,  # Adjust quantity as needed
