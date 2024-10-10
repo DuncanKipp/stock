@@ -4,14 +4,14 @@ from alpaca.trading.requests import MarketOrderRequest
 from alpaca.trading.enums import OrderSide, TimeInForce
 
 # Initialize the Alpaca client with your API keys
-alpaca_client = TradingClient('PK97FZI7DCSN9HTR10X8', 'TQu6CgDhBG3WAJfokTc8yjifj3yLjB14WzoC5KTf', paper=True)
+alpaca_client = TradingClient('PK2HF3AVFD82Q8H2WPT5', 'qeJT6aEmPKRjKYctD260WodmnslI3Pln0D5VDtCN', paper=True)
 
 # List of popular soda companies
 soda_stocks = ["KO", "PEP", "DAN", "COT", "SBUX"]
 
 def get_stock_data(stock):
     """Fetch the latest stock data from Polygon.io."""
-    url = f'https://api.polygon.io/v2/aggs/ticker/{stock}/prev?apiKey=XJ65qwpvOPzDNyf81bbjX6DWaAcVGUHq'
+    url = f'https://api.polygon.io/v2/aggs/ticker/{stock}/prev?apiKey=js1m5p3WRvg9VkO5M3pbQNXQYQRVvDTO
     response = requests.get(url)
     
     if response.status_code == 200:
