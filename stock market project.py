@@ -4,7 +4,7 @@ from alpaca.trading.requests import MarketOrderRequest
 from alpaca.trading.enums import OrderSide, TimeInForce
 
 # Initialize the Alpaca client with your API keys
-alpaca_client = TradingClient('PK2HF3AVFD82Q8H2WPT5', 'qeJT6aEmPKRjKYctD260WodmnslI3Pln0D5VDtCN', paper=True)
+alpaca_client = TradingClient('PKTM9MMWZ6W4JYXC0WDF', '1KXn0xbDyHebxc8mvzjNmTNvkIbOofzSav8o11fH', paper=True)
 
 # List of popular soda companies
 soda_stocks = ["KO", "PEP", "DAN", "COT", "SBUX"]
