@@ -21,6 +21,8 @@ jobs:
       - name: Install dependencies
         run: |
           pip install requests alpaca-trade-api
+          pip install alpaca-py
+          pip install -U polygon-api-client
 
       - name: Run the stock buying script
         env:
