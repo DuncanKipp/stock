@@ -1,6 +1,7 @@
 name: Buy Soda Stock
 
 on:
+  push:
   schedule:
     - cron: '0 15 * * 3'  # Runs every Wednesday at 15:00 UTC (10:00 AM ET)
 
