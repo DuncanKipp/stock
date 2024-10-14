@@ -1,0 +1,33 @@
+name: Buy Soda Stock
+
+on:
+  push:
+  schedule:
+    - cron: '0 15 * * 3'  # Runs every Wednesday at 15:00 UTC (10:00 AM ET)
+
+jobs:
+  buy_stocks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'  # Specify your desired Python version
+
+      - name: Install dependencies
+        run: |
+          pip install requests alpaca-trade-api
+          pip install alpaca-py
+          
+
+      - name: Run the stock buying script
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}  # Store your secrets in GitHub
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          
+        run: |
+          stock market project.py
