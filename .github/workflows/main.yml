@@ -28,6 +28,6 @@ jobs:
         env:
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}  # Store your secrets in GitHub
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
-          POLYGON_API_KEY: ${{ secrets.POLYGON_API_KEY }}  # Store your Polygon API key in GitHub
+          
         run: |
           stock market project.py
